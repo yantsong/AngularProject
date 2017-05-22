@@ -29,6 +29,7 @@
   "devDependencies": {
     "@angular/cli": "1.0.4",
     "@angular/compiler-cli": "^4.0.0",
+    "@types/bootstrap": "^3.3.33",
     "@types/jasmine": "2.5.38",
     "@types/jquery": "^2.0.45",
     "@types/node": "~6.0.60",

@@ -8,8 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { ProdectComponent } from './prodect/prodect.component';
 import { StarsComponent } from './stars/stars.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { StarsComponent } from './stars/stars.component';
     SearchComponent,
     FooterComponent,
     CarouselComponent,
-    ProdectComponent,
-    StarsComponent
+    StarsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
