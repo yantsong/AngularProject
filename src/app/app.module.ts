@@ -1,3 +1,4 @@
+import { ProductService} from './shared/product-service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 const routeConfig:Routes = [
   {path:'',component:HomeComponent},
-  {path:'product/:prodTitle',component:ProductDetailComponent}
+  {path:'product/:prodId',component:ProductDetailComponent}
 ]
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ const routeConfig:Routes = [
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,24 @@
-<div>
+<div class="thumbnail">
     <img src="http://placehold.it/820x230" alt="">
-    <h4>{{productTitle}}</h4>
+    <div>
+        <h4 class="pull-right">{{product.price}}</h4>
+        <h4>{{product.title}}</h4>
+        <p>{{product.dese}}</p>
+    </div>
+    <p class="pull-right">{{comments.length}}</p>
+    <p>
+        <app-stars [rating]="product.rating"></app-stars>
+    </p>
+</div>
+<div class="well">
+    <div class="row" *ngFor="let item of comments">
+        <hr>
+        <div class="col-md-12">
+            <app-stars [rating]="item.rating"></app-stars>
+            <span>{{item.user}}</span>
+            <span class="pull-right">{{item.time}}</span>
+            <p></p>
+            <p>{{item.content}}</p>
+        </div>
+    </div>
 </div>
