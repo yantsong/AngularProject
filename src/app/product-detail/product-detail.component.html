@@ -12,10 +12,14 @@
 </div>
 <div class="well">
     <div>
-        <app-stars [rating]="newRating" [radeOnly]="false"></app-stars>
-        <textarea></textarea>
+        <button class="btn btn-success" (click)="isExpand=!isExpand">评论</button>
+    </div>
+    <div [hidden]="isExpand">
+        <!--<div [ngStyle]="{'display': isExpand?'block':'none'}">-->
+        <app-stars [(rating)]="newRating" [radeOnly]="false"></app-stars>
+        <textarea [(ngModel)]="comment"></textarea>
         <div>
-            <button class="row" (click)="">pull</button>
+            <button class="row" (click)="doComment('li',this.newRating,comment)">pull</button>
         </div>
     </div>
 
