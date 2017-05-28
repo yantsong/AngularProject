@@ -1,4 +1,9 @@
-<div *ngFor="let product of products" class="col-mid-4 col-sm-4 col-lg-4">
+<div class="row">
+    <div class="col-sm-12">
+        <input class="form-group" placeholder="enter name" [formControl]="titleFilter">
+    </div>
+</div>
+<div *ngFor="let product of products | filter:'title' :keyword" class="col-mid-4 col-sm-4 col-lg-4">
     <div class="thumbnail">
         <img src="http://placehold.it/320x150" alt="">
         <div class="caption">
