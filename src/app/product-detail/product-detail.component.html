@@ -11,6 +11,14 @@
     </p>
 </div>
 <div class="well">
+    <div>
+        <app-stars [rating]="newRating" [radeOnly]="false"></app-stars>
+        <textarea></textarea>
+        <div>
+            <button class="row" (click)="">pull</button>
+        </div>
+    </div>
+
     <div class="row" *ngFor="let item of comments">
         <hr>
         <div class="col-md-12">

@@ -10,6 +10,7 @@ import {ActivatedRoute} from "@angular/router"
 })
 export class ProductDetailComponent implements OnInit {
   product: Product;
+  newRating:number = 0;
   comments:Comment[];
   constructor(private routeInfo: ActivatedRoute,private ProductService: ProductService) { }
 
@@ -18,7 +19,7 @@ export class ProductDetailComponent implements OnInit {
     console.log(prodId);
     this.product = this.ProductService.getProductByid(prodId);
     this.comments = this.ProductService.getCommentForId(prodId);
-    
   }
+
 
 }

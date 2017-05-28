@@ -32,6 +32,9 @@ return this.products.find((p) => p.id == id);
 getCommentForId(id:number) :Comment[]{
     return this.comment.filter((comment) => comment.id == id)
 }
+creatComment(user:string,rating:number,com:string):Comment{
+  return new Comment(1,user,1,rating,'1111-11-11',com);
+}
 
 
    }
