@@ -18,7 +18,11 @@ import { FilterPipe } from './pipe/filter.pipe';
 
 const routeConfig:Routes = [
   {path:'',component:HomeComponent},
-  {path:'product/:prodId',component:ProductDetailComponent}
+  {path:'product/:prodId',component:ProductDetailComponent},
+  {path:'wmedu_web/index',component:HomeComponent},
+  {path:'**',component:HomeComponent},
+
+  
 ]
 @NgModule({
   declarations: [

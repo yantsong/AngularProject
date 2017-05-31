@@ -23,8 +23,23 @@ export class HomeComponent implements OnInit {
         success:(res)=>{
 console.log(res)
         }
-    }
+    }  
       );
+      var obj1;
+    obj1 = jQuery.ajax(
+      {
+        url:"http://192.168.10.189:8085/wmedu_web/ajax/getcoulist",
+        async:false,
+        dataType:'json',
+        error:(x,y,z) =>{
+          console.log(x,y,z);
+        },
+        success:(res)=>{
+console.log(res)
+        }
+    }  
+      );
+
     // console.log(obj.responseText);
     
   // $("#myDiv").html(htmlobj.responseText);

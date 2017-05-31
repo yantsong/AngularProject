@@ -3,18 +3,18 @@
         <input class="form-group" placeholder="enter name" [formControl]="titleFilter">
     </div>
 </div>
-<div *ngFor="let product of products | filter:'title' :keyword" class="col-mid-4 col-sm-4 col-lg-4">
+<div *ngFor="let product of newmessage " class="col-mid-4 col-sm-4 col-lg-4">
     <div class="thumbnail">
         <img src="http://placehold.it/320x150" alt="">
         <div class="caption">
-            <h4 class="pull-right">{{product.price}}</h4>
+            <h4 class="pull-right">{{product.title}}</h4>
             <h4>
-                <a [routerLink]="['/product',product.id]">{{product.rating}}</a>
+                <a [routerLink]="['/product',product.id]">{{product.description}}</a>
             </h4>
-            <p>{{product.desc}}</p>
+            <p>{{product.view_total}}</p>
         </div>
         <div>
-            <app-stars [rating]="product.rating"></app-stars>
+            <!--<app-stars [rating]="product.rating"></app-stars>-->
         </div>
     </div>
 </div>
